@@ -1,0 +1,18 @@
+html,
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 0;
+}
+
+body {
+  display: inline-block;
+  background: url('./images/bg.jpg') bottom left no-repeat,
+    url('./images/bg-rpt.jpg') bottom left repeat-x;
+}
+
+.container {
+  width: 100vw;
+}
