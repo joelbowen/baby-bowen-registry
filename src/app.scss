@@ -13,23 +13,19 @@ body {
   display: inline-block;
   background: url('./images/bg.jpg') bottom left no-repeat,
     url('./images/bg-rpt.jpg') bottom left repeat-x;
+
+  // Mobile
   @media screen and (max-width: $mobile-width-max) {
     background-size: 100%, 0%;
   }
-}
 
-.container {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 100vw;
-  height: 70vh;
-
-  @media screen and (max-width: $mobile-width-max) and (orientation: landscape) {
-    align-items: flex-start;
+  // Tablet, Portrait
+  @media screen and (min-width: $tablet-width-min) and (orientation: portrait) {
+    background-size: 100%, 100% 50%;
+    background-position: bottom;
   }
 }
 
 @import './styles/utilities';
+@import './styles/display';
 @import './styles/links';
-@import './styles/mobile';

@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 70vh;
+
+  // Mobile -> Tablet, Landscape
+  @media screen and (min-width: $tablet-width-min) and (orientation: landscape) {
+    align-items: flex-start;
+  }
+
+  // Tablet+, Portrait
+  @media screen and (min-width: $tablet-width-min) and (orientation: portrait) {
+    height: 60vh;
+  }
+}
