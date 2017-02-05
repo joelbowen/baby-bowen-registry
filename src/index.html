@@ -39,5 +39,6 @@
       </li>
     </ul>
   </section>
+  ${process.env.NODE_ENV === 'production' ? require('./analytics.partial') : ''}
 </body>
 </html>

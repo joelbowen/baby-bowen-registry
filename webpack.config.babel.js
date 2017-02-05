@@ -40,6 +40,10 @@ module.exports = env => {
           test: /\.png|.jpg/,
           use: ['file-loader'],
         },
+        {
+          test: /\.partial/,
+          use: ['html-loader'],
+        },
       ],
     },
     plugins: removeEmpty([
@@ -56,14 +60,14 @@ module.exports = env => {
       new OfflinePlugin(),
       new webpack.DefinePlugin({
         'process.env': {
-          NODE_ENV: ifProd('"production"', '"development"')
-        }
+          NODE_ENV: ifProd('"production"', '"development"'),
+        },
       }),
     ]),
-  }
+  };
   if (env.debug) {
     console.log(config);
     debugger; // eslint-disable-line
   }
   return config;
-}
+};
