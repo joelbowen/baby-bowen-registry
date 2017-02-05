@@ -1,0 +1,39 @@
+@mixin registry-link($padding-top) {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: $padding-top;
+  width: 100%;
+  max-height: 20vh;
+}
+
+.registry-links {
+  margin: 0;
+  list-style-type: none;
+  padding: 0 25vw;
+  text-align: center;
+  width: 100%;
+
+  li {
+    margin: 6vh 0;
+  }
+
+  .buybuybaby-logo {
+    @include registry-link(51.578947368%);
+    background-image: url('./images/buybuybaby-logo.png');
+  }
+
+  .target-logo {
+    @include registry-link(21.403508772%);
+    background-image: url('./images/target-logo.png');
+  }
+
+  .amazon-logo {
+    @include registry-link(30.62730627%);
+    background-image: url('./images/amazon-logo.png');
+  }
+
+  @media screen and (max-width: $mobile-width-max) and (orientation: landscape) {
+    padding: 5vh 15vw 5vh 55vw;
+  }
+}
