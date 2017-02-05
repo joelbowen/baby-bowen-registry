@@ -35,10 +35,10 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "webpack --env.prod -p",
-    "postbuild": "cpy favicon.ico dist",
+    "postbuild": "cpy 'favicons/*.png' dist",
     "prebuild:dev": "rimraf dist",
     "build:dev": "webpack --env.dev",
-    "postbuild:dev": "cpy favicon.ico dist",
+    "postbuild:dev": "cpy 'favicons/*.png' dist",
     "start": "http-server dist",
     "dev": "webpack-dev-server --env.dev --host 0.0.0.0",
     "debug": "node-nightly --inspect --debug-brk node_modules/.bin/webpack --env.debug",
