@@ -34,7 +34,7 @@
 
   // Mobile -> Tablet, Landscape
   @media screen and (max-width: $tablet-width-max) and (orientation: landscape) {
-    padding: 5vh 15vw 5vh 55vw;
+    padding: 20vh 15vw 5vh 58vw;
   }
 
   // Tablet, Portrait
@@ -45,6 +45,6 @@
   // Desktop+
   @media screen and (min-width: $desktop-width-min) and (orientation: landscape) {
     padding: 5vh 20vw 5vh 45vw;
-    max-width: 25vw;
+    max-width: 22vw;
   }
 }
